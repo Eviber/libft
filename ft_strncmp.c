@@ -6,13 +6,13 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 10:52:31 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/10 10:54:27 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/15 13:03:59 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	int		res;
 	size_t	i;
