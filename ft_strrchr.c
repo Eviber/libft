@@ -6,13 +6,13 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 19:47:35 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/08 20:04:20 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/16 16:15:57 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*res;
 

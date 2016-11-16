@@ -6,7 +6,7 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 10:56:26 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/15 16:13:49 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/16 11:19:16 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ int		ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' || str[i] <= '9')
 	{
-
+		res *= 10;
+		res += (str[i] - '0') * sign;
 	}
 	return (res);
 }
