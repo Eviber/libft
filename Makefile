@@ -6,7 +6,7 @@
 #    By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 02:18:15 by ygaude            #+#    #+#              #
-#    Updated: 2016/11/09 14:36:53 by ygaude           ###   ########.fr        #
+#    Updated: 2016/11/18 12:56:22 by ygaude           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,3 +38,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+check: all fclean
