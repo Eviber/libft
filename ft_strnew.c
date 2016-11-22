@@ -6,14 +6,14 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 10:39:22 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/18 10:42:18 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/22 11:11:27 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+char			*ft_strnew(size_t size)
 {
 	return ((char *)ft_memalloc(size));
 }

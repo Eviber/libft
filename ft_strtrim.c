@@ -6,13 +6,13 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 12:10:12 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/21 16:30:43 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/22 11:12:32 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(const char *s)
+char			*ft_strtrim(const char *s)
 {
 	unsigned int	start;
 	unsigned int	i;

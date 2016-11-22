@@ -6,14 +6,14 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/20 16:02:29 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/20 16:03:18 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/22 11:10:36 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
+char			*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
 	unsigned int		i;
 	char				*res;

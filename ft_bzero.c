@@ -6,14 +6,14 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 00:03:28 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/07 00:03:31 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/22 11:05:59 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t size)
+void			ft_bzero(void *s, size_t size)
 {
 	ft_memset(s, 0, size);
 }

@@ -6,14 +6,14 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 13:12:07 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/20 15:28:01 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/22 11:10:04 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strjoin(const char *s1, const char *s2)
+char			*ft_strjoin(const char *s1, const char *s2)
 {
 	size_t	len1;
 	size_t	len2;

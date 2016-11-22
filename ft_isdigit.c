@@ -6,11 +6,11 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 11:38:52 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/16 11:42:26 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/22 11:06:49 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isdigit(int c)
+int				ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);

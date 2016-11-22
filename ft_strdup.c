@@ -6,14 +6,14 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 09:42:32 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/07 09:49:32 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/22 11:09:47 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char			*ft_strdup(const char *s1)
 {
 	char	*res;
 	int		size;

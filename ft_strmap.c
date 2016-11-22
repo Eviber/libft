@@ -6,14 +6,14 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/20 15:30:53 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/20 15:54:00 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/22 11:10:29 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strmap(const char *s, char (*f)(char))
+char			*ft_strmap(const char *s, char (*f)(char))
 {
 	int		i;
 	char	*res;

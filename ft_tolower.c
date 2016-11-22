@@ -6,11 +6,11 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 14:20:04 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/16 14:22:06 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/22 11:12:39 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_tolower(int c)
+int				ft_tolower(int c)
 {
 	return ((c >= 'A' && c <= 'Z') * ('a' - 'A') + c);
 }

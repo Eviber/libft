@@ -6,11 +6,11 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 13:34:55 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/16 13:53:48 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/22 11:06:58 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isprint(int c)
+int				ft_isprint(int c)
 {
 	return (c >= ' ' && c <= '~');
 }

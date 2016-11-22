@@ -6,11 +6,11 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 12:19:33 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/16 13:32:34 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/22 11:06:43 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isascii(int c)
+int				ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

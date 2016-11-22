@@ -6,13 +6,13 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 11:49:12 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/18 12:58:35 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/22 11:11:17 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strnequ(const char *s1, const char *s2, size_t n)
+int				ft_strnequ(const char *s1, const char *s2, size_t n)
 {
 	return (!ft_strncmp(s1, s2, n));
 }

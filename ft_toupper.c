@@ -6,11 +6,11 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 13:56:25 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/16 14:22:16 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/22 11:12:49 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_toupper(int c)
+int				ft_toupper(int c)
 {
 	return ((c >= 'a' && c <= 'z') * ('A' - 'a') + c);
 }

@@ -6,13 +6,13 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 15:20:57 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/08 19:38:08 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/22 11:10:43 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, char *s2, size_t n)
+char			*ft_strncat(char *s1, char *s2, size_t n)
 {
 	size_t	i;
 	size_t	start;

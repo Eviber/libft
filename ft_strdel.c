@@ -6,13 +6,13 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 10:44:03 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/18 10:51:42 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/22 11:09:39 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	ft_strdel(char **as)
+void			ft_strdel(char **as)
 {
 	free(*as);
 	*as = NULL;
