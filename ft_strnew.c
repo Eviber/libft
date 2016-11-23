@@ -6,7 +6,7 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 10:39:22 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/22 11:11:27 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/23 14:58:25 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 
 char			*ft_strnew(size_t size)
 {
-	return ((char *)ft_memalloc(size));
+	return ((char *)ft_memalloc(sizeof(char) * (size + 1)));
 }

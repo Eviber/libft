@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 10:56:26 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/23 16:31:36 by ygaude           ###   ########.fr       */
+/*   Created: 2016/11/23 16:03:19 by ygaude            #+#    #+#             */
+/*   Updated: 2016/11/23 18:08:39 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				ft_atoi(const char *str)
+void			ft_putnbr_fd(int n, int fd)
 {
-	int		res;
-	int		i;
-	int		sign;
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(n / -10, fd);
+		ft_putchar_fd(n % 10 * -1 + '0', fd);
+	}
+	else if (n < 10)
+		ft_putchar_fd(n + '0', fd);
+	else
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+}
 
-	i = 0;
-	sign = 1;
-	res = 0;
-	while (str[i] < ' ' && str[i])
-		i++;
-	if (str[i] == '+' || str[i] == '-')
-		sign = (str[i++] == '-') ? -1 : 1;
-	while (str[i] >= '0' && str[i] <= '9')
-		res = res * 10 + ((str[i++] - '0') * sign);
-	return (res);
+int				main(int argc, char **argv)
+{
+	if (argc == 2)
+		ft_putnbr_fd(atoi(argv[1]), 1);
+	return (0);
 }
