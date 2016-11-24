@@ -6,11 +6,11 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 10:53:19 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/15 13:03:46 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/22 11:09:21 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(const char *s1, const char *s2)
+int				ft_strcmp(const char *s1, const char *s2)
 {
 	int	res;
 	int	i;

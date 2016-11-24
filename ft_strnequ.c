@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 00:09:08 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/22 11:08:22 by ygaude           ###   ########.fr       */
+/*   Created: 2016/11/18 11:49:12 by ygaude            #+#    #+#             */
+/*   Updated: 2016/11/22 11:11:17 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-void			ft_memdel(void **ap)
+int				ft_strnequ(const char *s1, const char *s2, size_t n)
 {
-	free(*ap);
-	*ap = NULL;
+	return (!ft_strncmp(s1, s2, n));
 }

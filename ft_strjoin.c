@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 00:09:08 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/22 11:08:22 by ygaude           ###   ########.fr       */
+/*   Created: 2016/11/18 13:12:07 by ygaude            #+#    #+#             */
+/*   Updated: 2016/11/22 11:10:04 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-void			ft_memdel(void **ap)
+char			*ft_strjoin(const char *s1, const char *s2)
 {
-	free(*ap);
-	*ap = NULL;
+	size_t	len1;
+	size_t	len2;
+	char	*res;
+
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	res = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
+	if (res)
+	{
+		ft_strcpy(res, s1);
+		ft_strcpy(res + len1, s2);
+		res[len1 + len2] = '\0';
+	}
+	return (res);
 }

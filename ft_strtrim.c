@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 00:09:08 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/22 11:08:22 by ygaude           ###   ########.fr       */
+/*   Created: 2016/11/21 12:10:12 by ygaude            #+#    #+#             */
+/*   Updated: 2016/11/23 10:35:06 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-void			ft_memdel(void **ap)
+char			*ft_strtrim(const char *s)
 {
-	free(*ap);
-	*ap = NULL;
+	unsigned int	start;
+	unsigned int	i;
+	size_t			len;
+	char			*res;
+
+	i = 0;
+	while (ft_isspace(s[i]))
+		i++;
+	start = i;
+	while (!ft_isspace(s[i]))
+		i++;
+	len = i - start;
+	res = ft_strsub(s, start, len);
+	return (res);
 }

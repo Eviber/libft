@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 00:09:08 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/22 11:08:22 by ygaude           ###   ########.fr       */
+/*   Created: 2016/11/16 11:47:19 by ygaude            #+#    #+#             */
+/*   Updated: 2016/11/22 11:06:30 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-void			ft_memdel(void **ap)
+int				ft_isalnum(int c)
 {
-	free(*ap);
-	*ap = NULL;
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (1);
+	return (0);
 }

@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 00:09:08 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/22 11:08:22 by ygaude           ###   ########.fr       */
+/*   Created: 2016/11/23 15:21:51 by ygaude            #+#    #+#             */
+/*   Updated: 2016/11/23 16:00:52 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 #include "libft.h"
 
-void			ft_memdel(void **ap)
+void			ft_putstr(const char *s)
 {
-	free(*ap);
-	*ap = NULL;
+	write(1, s, ft_strlen(s));
 }
