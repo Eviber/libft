@@ -6,19 +6,19 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 00:09:26 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/22 11:10:19 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/25 19:04:47 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "libft.h"
 
-int				ft_strlen(const char *str)
+size_t				ft_strlen(const char *str)
 {
 	int	i;
 
 	i = 0;
-	while (str && str[i])
+	while (str[i])
 		i++;
 	return (i);
 }

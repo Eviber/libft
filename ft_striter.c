@@ -6,15 +6,15 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 16:02:56 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/19 16:19:08 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/24 17:33:42 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striter(char *s, void (*f)(char *))
+void				ft_striter(char *s, void (*f)(char *))
 {
 	int	i;
 
 	i = 0;
 	while (s[i])
-		f(s[i++]);
+		f(&s[i++]);
 }

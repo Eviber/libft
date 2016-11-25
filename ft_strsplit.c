@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-static int		countwd(const char *s, char c)
+static int			countwd(const char *s, char c)
 {
 	int		i;
 	int		inwd;
@@ -34,7 +34,7 @@ static int		countwd(const char *s, char c)
 	return (wdcount);
 }
 
-static int		nextwd(const char *s, char c)
+static int			nextwd(const char *s, char c)
 {
 	int		i;
 
@@ -46,7 +46,7 @@ static int		nextwd(const char *s, char c)
 	return (i);
 }
 
-static size_t	wdlen(const char *s, char c)
+static size_t		wdlen(const char *s, char c)
 {
 	size_t	len;
 
@@ -56,7 +56,7 @@ static size_t	wdlen(const char *s, char c)
 	return (len);
 }
 
-char			**ft_strsplit(const char *s, char c)
+char				**ft_strsplit(const char *s, char c)
 {
 	int		i;
 	int		wdindex;

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_magnitude(unsigned int n)
+unsigned int		ft_magnitude(unsigned int n)
 {
 	if (n < 10)
 		return (1);

@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-void			*ft_memchr(const void *s, int c, size_t len)
+void				*ft_memchr(const void *s, int c, size_t len)
 {
 	size_t	i;
 	char	*ptr;

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static void		addchar(char c, char *str)
+static void			addchar(char c, char *str)
 {
 	int		i;
 
@@ -22,7 +22,7 @@ static void		addchar(char c, char *str)
 	str[i] = str[i] ? '\0' : c;
 }
 
-static void		itoa_rec(unsigned int n, char *str)
+static void			itoa_rec(unsigned int n, char *str)
 {
 	if (n < 10)
 		addchar(n - '0', str);
@@ -33,7 +33,7 @@ static void		itoa_rec(unsigned int n, char *str)
 	}
 }
 
-static char		*initstr(int n)
+static char			*initstr(int n)
 {
 	size_t	size;
 	char	*str;
@@ -44,7 +44,7 @@ static char		*initstr(int n)
 	return (str);
 }
 
-char			*ft_itoa(int n)
+char				*ft_itoa(int n)
 {
 	char	*res;
 

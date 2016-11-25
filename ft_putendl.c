@@ -6,13 +6,13 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 15:58:41 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/23 15:59:33 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/24 17:32:22 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			ft_putendl(const char *s)
+void				ft_putendl(const char *s)
 {
-	ft_putendl_fd(s, fd);
+	ft_putendl_fd(s, 1);
 }

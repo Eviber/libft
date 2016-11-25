@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/23 16:03:19 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/24 17:33:07 by ygaude           ###   ########.fr       */
+/*   Created: 2016/11/25 10:20:40 by ygaude            #+#    #+#             */
+/*   Updated: 2016/11/25 13:38:37 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-void				ft_putnbr_fd(int n, int fd)
+t_list				*ft_lstnew(const void *content, size_t content_size)
 {
-	if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		ft_putnbr_fd(n / -10, fd);
-		ft_putchar_fd(n % 10 * -1 + '0', fd);
-	}
-	else if (n < 10)
-		ft_putchar_fd(n + '0', fd);
-	else
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
-	}
+	t_list	*node;
+
+	if (!(node = (t_list *)malloc(sizeof(t_list))))
+		return (NULL);
+	node->content = (void *)content;
+	node->content_size = content_size * (content != NULL);
+	node->next = NULL;
+	return (node);
 }

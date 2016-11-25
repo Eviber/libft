@@ -6,14 +6,14 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 15:21:51 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/23 16:00:52 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/25 13:21:39 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-void			ft_putstr(const char *s)
+void				ft_putstr(const char *s)
 {
 	write(1, s, ft_strlen(s));
 }

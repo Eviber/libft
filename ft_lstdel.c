@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/23 16:03:19 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/24 17:33:07 by ygaude           ###   ########.fr       */
+/*   Created: 2016/11/25 11:57:00 by ygaude            #+#    #+#             */
+/*   Updated: 2016/11/25 13:43:42 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-void				ft_putnbr_fd(int n, int fd)
+void				ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	if (n < 0)
+	t_list	*pnode;
+	t_list	*next;
+
+	pnode = *alst;
+	while (pnode)
 	{
-		ft_putchar_fd('-', fd);
-		ft_putnbr_fd(n / -10, fd);
-		ft_putchar_fd(n % 10 * -1 + '0', fd);
-	}
-	else if (n < 10)
-		ft_putchar_fd(n + '0', fd);
-	else
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
+		next = pnode->next;
+		ft_lstdelone(&pnode, del);
+		pnode = next;
 	}
 }

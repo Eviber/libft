@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstend.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/23 16:03:19 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/24 17:33:07 by ygaude           ###   ########.fr       */
+/*   Created: 2016/11/25 14:53:24 by ygaude            #+#    #+#             */
+/*   Updated: 2016/11/25 17:38:24 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void				ft_putnbr_fd(int n, int fd)
+t_list				*ft_lstend(t_list *lst)
 {
-	if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		ft_putnbr_fd(n / -10, fd);
-		ft_putchar_fd(n % 10 * -1 + '0', fd);
-	}
-	else if (n < 10)
-		ft_putchar_fd(n + '0', fd);
-	else
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
-	}
+	while (lst != NULL && lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }

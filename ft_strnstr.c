@@ -13,7 +13,7 @@
 #include <string.h>
 #include "libft.h"
 
-static int		checkwd(char *tocheck, const char *model, size_t len)
+static int			checkwd(char *tocheck, const char *model, size_t len)
 {
 	size_t	i;
 
@@ -25,7 +25,7 @@ static int		checkwd(char *tocheck, const char *model, size_t len)
 	return (0);
 }
 
-char			*ft_strnstr(const char *big, const char *small, size_t len)
+char				*ft_strnstr(const char *big, const char *small, size_t len)
 {
 	char	*res;
 	int		i;

@@ -6,13 +6,13 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 10:56:26 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/23 16:31:36 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/25 13:11:42 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				ft_atoi(const char *str)
+int					ft_atoi(const char *str)
 {
 	int		res;
 	int		i;
