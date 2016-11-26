@@ -6,7 +6,7 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 10:28:55 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/22 11:08:56 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/26 14:35:41 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char				*ft_strcat(char *s1, char *s2)
 
 	i = 0;
 	start = ft_strlen(s1);
-	while (s1[i])
+	while (s2[i])
 	{
 		s1[i + start] = s2[i];
 		i++;
