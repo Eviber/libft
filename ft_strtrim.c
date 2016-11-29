@@ -6,7 +6,7 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 12:10:12 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/23 10:35:06 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/29 16:17:25 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,12 @@ char				*ft_strtrim(const char *s)
 	while (ft_isspace(s[i]))
 		i++;
 	start = i;
-	while (!ft_isspace(s[i]))
-		i++;
+	i = ft_strlen(s) - 1;
+	while (i > start && ft_isspace(s[i]))
+		i--;
+	if (!i || i < start)
+		return (ft_strdup(""));
+	i++;
 	len = i - start;
 	res = ft_strsub(s, start, len);
 	return (res);

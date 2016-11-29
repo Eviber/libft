@@ -6,7 +6,7 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 09:42:32 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/22 11:09:47 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/28 14:22:03 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ char				*ft_strdup(const char *s1)
 
 	size = ft_strlen(s1);
 	res = malloc(sizeof(char) * (size + 1));
-	ft_memcpy(res, s1, size);
-	res[size] = '\0';
+	if (res)
+	{
+		ft_memcpy(res, s1, size);
+		res[size] = '\0';
+	}
 	return (res);
 }

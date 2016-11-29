@@ -6,7 +6,7 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/20 16:02:29 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/22 11:10:36 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/29 15:29:11 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char				*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (NULL);
-	res = malloc(sizeof(char) * (ft_strlen(s)));
+	res = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!res)
 		return (NULL);
 	i = -1;

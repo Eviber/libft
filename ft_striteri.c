@@ -6,7 +6,7 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 16:47:59 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/24 17:33:52 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/29 15:22:22 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@ void				ft_striteri(char *s, void (*f)(unsigned int, char *))
 	unsigned int	i;
 
 	i = -1;
-	while (s[++i])
+	while (s && s[++i])
 		f(i, &s[i]);
 }
