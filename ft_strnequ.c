@@ -6,7 +6,7 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 11:49:12 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/29 15:26:40 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/12/01 02:49:58 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int					ft_strnequ(const char *s1, const char *s2, size_t n)
 {
-	return (!ft_strncmp(s1, s2, n));
+	if (!n)
+		return (1);
+	return ((s1 && s2) ? !ft_strncmp(s1, s2, n) : 0);
 }

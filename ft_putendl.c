@@ -6,7 +6,7 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 15:58:41 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/24 17:32:22 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/30 14:26:36 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void				ft_putendl(const char *s)
 {
-	ft_putendl_fd(s, 1);
+	if (s)
+		ft_putendl_fd(s, 1);
 }

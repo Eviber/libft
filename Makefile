@@ -6,11 +6,13 @@
 #    By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 02:18:15 by ygaude            #+#    #+#              #
-#    Updated: 2016/11/28 14:34:15 by ygaude           ###   ########.fr        #
+#    Updated: 2016/12/01 02:15:09 by ygaude           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
 
 SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 	  ft_isprint.c ft_isspace.c ft_itoa.c ft_lstadd.c ft_lstaddend.c           \
@@ -29,19 +31,16 @@ OBJ = ${SRC:c=o}
 
 all: $(NAME)
 
-$(NAME):
-	@echo "Compiling sources..."
-	@gcc -Wall -Wextra -Werror -c $(SRC)
+%.o : %.c
+	$(CC) $(CFLAGS)	-c -o $@ $^
+
+$(NAME): $(OBJ)
 	@echo "Creating library..."
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo "Done !"
 
 clean:
-	@rm -f $(OBJ)
-	@echo "Object files removed."
-
-only: re
 	@rm -f $(OBJ)
 	@echo "Object files removed."
 

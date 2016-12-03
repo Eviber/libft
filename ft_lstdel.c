@@ -6,7 +6,7 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 11:57:00 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/25 13:43:42 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/30 17:26:52 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 		ft_lstdelone(&pnode, del);
 		pnode = next;
 	}
+	*alst = NULL;
 }

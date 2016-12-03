@@ -6,12 +6,14 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 10:59:20 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/23 10:33:57 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/30 21:14:55 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+
+#include <stdio.h>
 
 static int			countwd(const char *s, char c)
 {
@@ -65,12 +67,17 @@ char				**ft_strsplit(const char *s, char c)
 
 	i = 0;
 	wdindex = 0;
+	if (!s)
+		return (NULL);
 	wdcount = countwd(s, c);
-	res = (char **)malloc(sizeof(char *) * wdcount + 1);
+	if (!(res = (char **)malloc(sizeof(char *) * (wdcount + 1))))
+		return (NULL);
 	while (i < wdcount)
 	{
-		wdindex = nextwd(&s[i], c);
-		res[i] = ft_strsub(s, wdindex, wdlen(&s[wdindex], c));
+		if (s[wdindex] != c)
+			res[i++] = ft_strsub(s, wdindex, wdlen(&s[wdindex], c));
+		wdindex += nextwd(&s[wdindex], c);
 	}
+	res[i] = NULL;
 	return (res);
 }

@@ -6,7 +6,7 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 10:56:26 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/26 18:29:08 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/12/01 09:52:11 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int					ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	res = 0;
-	while (str[i] <= ' ' && str[i] > 0)
+	while (ft_isspace(str[i]) && str[i] > 0)
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 		sign = (str[i++] == '-') ? -1 : 1;

@@ -6,7 +6,7 @@
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 15:21:51 by ygaude            #+#    #+#             */
-/*   Updated: 2016/11/25 13:21:39 by ygaude           ###   ########.fr       */
+/*   Updated: 2016/11/30 14:26:05 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 
 void				ft_putstr(const char *s)
 {
-	write(1, s, ft_strlen(s));
+	if (s)
+		write(1, s, ft_strlen(s));
 }
