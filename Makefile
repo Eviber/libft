@@ -6,7 +6,7 @@
 #    By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 02:18:15 by ygaude            #+#    #+#              #
-#    Updated: 2016/12/01 02:15:09 by ygaude           ###   ########.fr        #
+#    Updated: 2016/12/08 18:36:00 by ygaude           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,17 +35,13 @@ all: $(NAME)
 	$(CC) $(CFLAGS)	-c -o $@ $^
 
 $(NAME): $(OBJ)
-	@echo "Creating library..."
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo "Done !"
 
 clean:
 	@rm -f $(OBJ)
-	@echo "Object files removed."
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "$(NAME) removed"
 
 re: fclean all
