@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_memjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/20 16:07:10 by ygaude            #+#    #+#             */
-/*   Updated: 2017/09/09 06:32:47 by ygaude           ###   ########.fr       */
+/*   Created: 2017/09/02 16:56:20 by ygaude            #+#    #+#             */
+/*   Updated: 2017/09/10 03:27:56 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-char				*ft_strsub(const char *s, unsigned int start, size_t len)
+char				*ft_memjoin(void *p1, size_t l1, void *p2, size_t l2)
 {
 	char	*res;
 
-	if (!s || !(res = ft_strnew(len)))
+	if (!p1 || !p2 || !(l1 + l2) || !(res = (char *)ft_memalloc(l1 + l2)))
 		return (NULL);
-	return (ft_strncpy(res, s + start, len));
+	ft_memcpy(res, p1, l1);
+	ft_memcpy(res + l1, p2, l2);
+	return (res);
 }

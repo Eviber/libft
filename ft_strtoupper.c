@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_strtoupper.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/20 16:07:10 by ygaude            #+#    #+#             */
-/*   Updated: 2017/09/09 06:32:47 by ygaude           ###   ########.fr       */
+/*   Created: 2017/08/27 20:58:29 by ygaude            #+#    #+#             */
+/*   Updated: 2017/09/02 18:16:57 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-char				*ft_strsub(const char *s, unsigned int start, size_t len)
+char				*ft_strtoupper(char *str)
 {
-	char	*res;
+	int		i;
 
-	if (!s || !(res = ft_strnew(len)))
-		return (NULL);
-	return (ft_strncpy(res, s + start, len));
+	i = -1;
+	while (str[++i])
+		str[i] = ft_toupper(str[i]);
+	return (str);
 }

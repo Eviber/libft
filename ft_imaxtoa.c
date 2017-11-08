@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_imaxtoa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/20 16:07:10 by ygaude            #+#    #+#             */
-/*   Updated: 2017/09/09 06:32:47 by ygaude           ###   ########.fr       */
+/*   Created: 2017/09/10 03:18:08 by ygaude            #+#    #+#             */
+/*   Updated: 2017/09/10 03:18:58 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-char				*ft_strsub(const char *s, unsigned int start, size_t len)
+char	*ft_imaxtoa(intmax_t n, unsigned int base)
 {
-	char	*res;
+	char	*str;
+	char	*tmp;
 
-	if (!s || !(res = ft_strnew(len)))
-		return (NULL);
-	return (ft_strncpy(res, s + start, len));
+	tmp = "-";
+	str = ft_uimaxtoa((uintmax_t)((n < 0) ? -n : n), base);
+	return ((n < 0) ? ft_strappend(&tmp, &str, 'S') : str);
 }

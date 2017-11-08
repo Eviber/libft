@@ -1,23 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/20 16:07:10 by ygaude            #+#    #+#             */
-/*   Updated: 2017/09/09 06:32:47 by ygaude           ###   ########.fr       */
+/*   Created: 2017/10/28 23:51:35 by ygaude            #+#    #+#             */
+/*   Updated: 2017/10/28 23:51:43 by ygaude           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
-
-char				*ft_strsub(const char *s, unsigned int start, size_t len)
+unsigned int	ft_abs(int n)
 {
-	char	*res;
-
-	if (!s || !(res = ft_strnew(len)))
-		return (NULL);
-	return (ft_strncpy(res, s + start, len));
+	return ((unsigned int)((n < 0) ? -n : n));
 }
