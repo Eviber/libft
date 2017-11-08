@@ -6,7 +6,7 @@
 #    By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 02:18:15 by ygaude            #+#    #+#              #
-#    Updated: 2017/10/28 23:52:28 by ygaude           ###   ########.fr        #
+#    Updated: 2017/11/08 10:34:00 by ygaude           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,10 +35,13 @@ OBJ = ${SRC:c=o}
 all: $(NAME)
 
 %.o : %.c
-	$(CC) $(CFLAGS)	-c -o $@ $^
+	@printf "Compiling...                                                      \
+	          \rCompiling... $(CC) $(CFLAGS) -c -o $@ $^\r"
+	@$(CC) $(CFLAGS)	-c -o $@ $^
 
 $(NAME): $(OBJ)
-	@echo "Creating library..."
+	@printf "Compiling...                                                      \
+	          \nLinking library...\n"
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo "Done !"
