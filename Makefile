@@ -6,7 +6,7 @@
 #    By: ygaude <ygaude@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/07 02:18:15 by ygaude            #+#    #+#              #
-#    Updated: 2017/11/08 10:34:00 by ygaude           ###   ########.fr        #
+#    Updated: 2017/11/08 16:41:58 by ygaude           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,8 +40,8 @@ all: $(NAME)
 	@$(CC) $(CFLAGS)	-c -o $@ $^
 
 $(NAME): $(OBJ)
-	@printf "Compiling...                                                      \
-	          \nLinking library...\n"
+	@printf "Compiling....\033[32m✔\033[0m                                                     \
+	    \nLinking......\033[32m✔\033[0m\n"
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo "Done !"
@@ -52,6 +52,6 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "$(NAME) removed"
+	@echo "$(NAME) removed."
 
 re: fclean all
